@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXIST entry
 	PRIMARY KEY (ent_id)
 );
 
-ALTER TABLE blog ADD CONSTRAINT blog_fk0 FOREIGN KEY (blo_use_login) REFERENCES user(use_id);
+ALTER TABLE blog ADD CONSTRAINT blog_fk0 FOREIGN KEY (ent_blo_login) REFERENCES user(use_id);
 
 ALTER TABLE entry ADD CONSTRAINT entry_fk0 FOREIGN KEY (ent_blo_id) REFERENCES blog(blo_id);
 
